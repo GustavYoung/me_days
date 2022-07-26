@@ -7,6 +7,7 @@
 #OMXPLAYER_DBUS_PID="/tmp/omxplayerdbus.${USER:-root}.pid"
 #export DBUS_SESSION_BUS_ADDRESS=`cat $OMXPLAYER_DBUS_ADDR`
 #export DBUS_SESSION_BUS_PID=`cat $OMXPLAYER_DBUS_PID`
+#El logic test quedo funcional en el equipo de prueba para la v1.0.0
 
 TIMER="1";
 TXSEC="$(($TIMER * 60))";
@@ -53,8 +54,8 @@ else
         do
         if [[ $Current_day != $(date +%-A) ]]
         then
-        sudo service AdsPlayer restart;
-        echo "dia incorrecto reiniciando servicio $Current_day no es $(date +%-A)"
+        echo "sudo service AdsPlayer restart;"
+        echo "dia incorrecto reiniciando servicio $Current_day no es $(date +%-A)" >> vflog_$(date +%Y_%m_%d).txt;
         fi
         echo "start $entry" >> vflog_$(date +%Y_%m_%d).txt;
         date >> vflog_$(date +%Y_%m_%d).txt;
@@ -70,7 +71,7 @@ else
 	echo "Stop $entry" >> vflog_$(date +%Y_%m_%d).txt;
 #        clear;
 	sleep $TXSEC;
-        echo "Lapso de tiempo entre anuncios $TXSEC" >> vflog_$(date +%Y_%m_%d).txt;
+        echo "Lapso de tiempo entre anuncios $TXSEC segundos" >> vflog_$(date +%Y_%m_%d).txt;
         done
 fi
 done
