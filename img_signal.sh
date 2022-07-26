@@ -20,6 +20,33 @@ TXSEC="$(($TIMER * 60))";
 
 IMAGIPATH="/home/uslu/elements/imagenes-flotantes";
 
+Current_day=$(date +%-A);
+
+echo "$Current_day";
+
+if [ $Current_day == Monday ]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Lunes"
+elif [ $Current_day == Tuesday ]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Martes"
+elif [ $Current_day == Wednesday]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Miercoles"
+elif [ $Current_day == Thursday ]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Jueves"
+elif [ $Current_day == Friday ]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Viernes"
+elif [ $Current_day == Saturday ]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Sabado"
+elif [ $Current_day == Sunday ]
+then
+   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Domingo"
+fi
+
 # Nombre de instancia para que no choque con la de uxmalstream
 SERVICE="imagiplayer";
 
@@ -59,6 +86,11 @@ while true; do
 else
         for entry in $IMAGIPATH/*
         do
+        if [[ $Current_day != $(date +%-A) ]]
+        then
+        echo "dia incorrecto reiniciando servicio $Current_day no es $(date +%-A)" >> vflog_$(date +%Y_%m_%d).txt;
+        sudo service ImgPlayer restart;
+        fi
 	echo "start $entry" >> log_$(date +%Y_%m_%d).txt;
         if [[ `lsof | grep $target_fix/parallelads/pl1/` ]]
         then
@@ -89,7 +121,7 @@ else
 	echo "Stop $entry" >> log_$(date +%Y_%m_%d).txt;
         clear;
 	/home/uslu/me_days/ssignage_sleep $TXSEC;
-        echo "Lapso de tiempo entre anuncios" >> log_$(date +%Y_%m_%d).txt;
+        echo "Lapso de tiempo entre anuncios $TXSEC segundos" >> log_$(date +%Y_%m_%d).txt;
         done
 fi
 done

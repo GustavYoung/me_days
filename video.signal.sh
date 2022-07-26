@@ -79,8 +79,8 @@ else
         do
         if [[ $Current_day != $(date +%-A) ]]
         then
-        sudo service AdsPlayer restart;
         echo "dia incorrecto reiniciando servicio $Current_day no es $(date +%-A)" >> vflog_$(date +%Y_%m_%d).txt;
+        sudo service AdsPlayer restart;
         fi
         echo "start $entry" >> vflog_$(date +%Y_%m_%d).txt;
         if [[ `lsof | grep $target_fix/parallelads/pl1/` ]]
