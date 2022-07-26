@@ -60,7 +60,7 @@ else
         date >> vflog_$(date +%Y_%m_%d).txt;
         ( cmdpid="$BASHPID";
         (echo "omxplayer --genlog --vol -8000 --layer 22 --alpha 1 --dbus_name org.mpris.AdsPlayer3.omxplayer $entry" >> vflog_$(date +%Y_%m_%d).txt) \
-        & while ! bash /home/uslu/me_days/fadein.sh;
+        & while ! echo "bash /home/uslu/me_days/fadein.sh";
         do
                echo "Todo listo";
                #exit;
