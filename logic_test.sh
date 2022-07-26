@@ -55,7 +55,6 @@ else
         then
         sudo service AdsPlayer restart;
         echo "dia incorrecto reiniciando servicio $Current_day no es $(date +%-A)"
-        done
         fi
         echo "start $entry" >> vflog_$(date +%Y_%m_%d).txt;
         date >> vflog_$(date +%Y_%m_%d).txt;
