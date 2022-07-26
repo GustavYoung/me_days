@@ -8,7 +8,7 @@
 #export DBUS_SESSION_BUS_ADDRESS=`cat $OMXPLAYER_DBUS_ADDR`
 #export DBUS_SESSION_BUS_PID=`cat $OMXPLAYER_DBUS_PID`
 
-TIMER="0.5";
+TIMER="1";
 TXSEC="$(($TIMER * 60))";
 
 VIDEOPATH="/home/uslu/elements/Spots_sin_audio";
