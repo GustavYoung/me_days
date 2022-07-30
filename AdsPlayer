@@ -14,7 +14,7 @@ case "$1" in
 
 start)
         echo "Starting AdsPlayer..."
-        cd /home/uslu/melibs/;
+        cd /home/uslu/me_days/;
         #sudo sh -c "TERM=linux setterm -foreground black -clear all >/dev/tty0";
         sudo screen -dmS anuncios bash video.signal.sh;
 ;;
