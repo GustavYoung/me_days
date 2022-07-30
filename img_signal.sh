@@ -26,25 +26,25 @@ echo "$Current_day";
 
 if [ $Current_day == Monday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/01_Lunes"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/01_Lunes"
 elif [ $Current_day == Tuesday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/02_Martes"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/02_Martes"
 elif [ $Current_day == Wednesday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/03_Miercoles"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/03_Miercoles"
 elif [ $Current_day == Thursday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/04_Jueves"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/04_Jueves"
 elif [ $Current_day == Friday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/05_Viernes"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/05_Viernes"
 elif [ $Current_day == Saturday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/06_Sabado"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/06_Sabado"
 elif [ $Current_day == Sunday ]
 then
-   VIDEOPATH="/home/uslu/elements/Spots_sin_audio/07_Domingo"
+   IMAGIPATH="/home/uslu/elements/imagenes-flotantes/07_Domingo"
 fi
 
 # Nombre de instancia para que no choque con la de uxmalstream
