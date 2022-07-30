@@ -24,7 +24,7 @@ then
 elif [ $Current_day == Tuesday ]
 then
    VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Martes"
-elif [ $Current_day == Wednesday]
+elif [ $Current_day == Wednesday ]
 then
    VIDEOPATH="/home/uslu/elements/Spots_sin_audio/Miercoles"
 elif [ $Current_day == Thursday ]
