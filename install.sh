@@ -1,5 +1,5 @@
 #!/bin/bash
-#Copyright 2021 Gustavo Santana
+#Copyright 2021 Gustavo Santana && Octavio Solis
 #(C) Mirai Works LLC
 #tput setab [1-7] Set the background colour using ANSI escape
 #tput setaf [1-7] Set the foreground colour using ANSI escape
