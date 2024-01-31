@@ -67,7 +67,7 @@ echo "Parchando Modulos...";
 # rm -rf /home/uslu/melibs/backups
   sudo rm /home/uslu/AdsSync/updatelogs/*
 # Crear carpetas de los dias 
-  cd /home/uslu/elements
+  cd /home/uslu/elements/imagenes-flotantes
   sudo mkdir 01_Lunes
   sudo mkdir 02_Martes
   sudo mkdir 03_Miercoles
