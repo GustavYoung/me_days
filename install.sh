@@ -66,3 +66,12 @@ echo "Parchando Modulos...";
   chmod +x /home/uslu/me_days/ssimg_sleep;
 # rm -rf /home/uslu/melibs/backups
   sudo rm /home/uslu/AdsSync/updatelogs/*
+# Crear carpetas de los dias 
+  cd /home/uslu/elements
+  mkdir 01_Lunes
+  mkdir 02_Martes
+  mkdir 03_Miercoles
+  mkdir 04_Jueves
+  mkdir 05_Viernes
+  mkdir 06_Sabado
+  mkdir 07_Domingo
