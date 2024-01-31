@@ -68,10 +68,10 @@ echo "Parchando Modulos...";
   sudo rm /home/uslu/AdsSync/updatelogs/*
 # Crear carpetas de los dias 
   cd /home/uslu/elements
-  mkdir 01_Lunes
-  mkdir 02_Martes
-  mkdir 03_Miercoles
-  mkdir 04_Jueves
-  mkdir 05_Viernes
-  mkdir 06_Sabado
-  mkdir 07_Domingo
+  sudo mkdir 01_Lunes
+  sudo mkdir 02_Martes
+  sudo mkdir 03_Miercoles
+  sudo mkdir 04_Jueves
+  sudo mkdir 05_Viernes
+  sudo mkdir 06_Sabado
+  sudo mkdir 07_Domingo
